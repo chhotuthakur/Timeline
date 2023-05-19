@@ -5,18 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#FFEB3B">
+    android:background="#FFFFFF"
+    android:id="@+id/parent">
 
    <EditText
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:id="@+id/edt_title"
-       android:hint="title"
+       android:hint="Title"
        android:textSize="25sp"
        android:padding="10dp"
        android:maxLines="1"
        android:layout_margin="10dp"
-       android:textColor="@color/black"/>
+       android:textColor="@color/white"
+       android:textColorHint="@color/white"
+       android:gravity="center_horizontal"
+       android:background="@drawable/bg_edt"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="250dp"
@@ -25,9 +29,11 @@
         android:textSize="25sp"
         android:padding="10dp"
         android:layout_margin="10dp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:layout_below="@id/edt_title"
-        android:gravity="start"/>
+        android:gravity="start"
+        android:background="@drawable/bg_edt"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,7 +41,10 @@
         android:text="SUBMIT"
         android:textSize="22sp"
         android:id="@+id/add_data"
-        android:layout_below="@id/edt_content"/>
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/edt_content"
+        android:background="@drawable/bg_btn"/>
 
 
 </RelativeLayout>
