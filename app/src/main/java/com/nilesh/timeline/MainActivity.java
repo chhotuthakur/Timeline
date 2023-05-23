@@ -46,14 +46,14 @@ public class MainActivity extends AppCompatActivity {
                 String id = tit.substring(0,4)+ code;
                 id = id.replace(" ", "");
 
-                databaseReference.child("upsc").child(id).child("title").setValue(tit);
-                databaseReference.child("upsc").child(id).child("content").setValue(con);
+                databaseReference.child("codestore").child(id).child("xmlcode").setValue(tit);
+                databaseReference.child("codestore").child(id).child("javacode").setValue(con);
 
                 databaseReference.addChildEventListener(new ChildEventListener() {
                     @Override
                     public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
 
-                        if (snapshot.hasChild("title")){
+                        if (snapshot.hasChild("codestore/xmlcode")){
                             clearForm();
                         }
                     }
